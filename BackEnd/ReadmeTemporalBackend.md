@@ -1,8 +1,8 @@
-# 🏛️ Portal de Transparencia y Gestión Financiera - Santo Domingo
+# Portal de Transparencia y Gestión Financiera - Santo Domingo
 
 Este sistema es una API REST robusta diseñada para gestionar y exponer la información financiera municipal, asegurando la transparencia en la administración de presupuestos, departamentos y contratos públicos. Implementa un modelo de seguridad basado en roles (RBAC) y autenticación mediante JSON Web Tokens (JWT).
 
-## 🚀 Stack Tecnológico
+## Stack Tecnológico
 
 - **Runtime:** Node.js (Express)
 - **Base de Datos:** PostgreSQL
@@ -10,7 +10,7 @@ Este sistema es una API REST robusta diseñada para gestionar y exponer la infor
 - **Infraestructura:** Docker & Docker Compose
 - **Seguridad:** bcrypt (Hashing) & jsonwebtoken (JWT)
 
-## 📂 Arquitectura del Proyecto
+## Arquitectura del Proyecto
 
 ```text
 transparencia-backend/
@@ -47,7 +47,7 @@ transparencia-backend/
 └── package.json              # Dependencias y scripts del proyecto
 ```
 
-## 🛠️ Guía de Instalación y Ejecución
+## Guía de Instalación y Ejecución
 
 ### 1. Configuración de Entorno
 Crea un archivo `.env` en la raíz del proyecto con las siguientes variables:
@@ -86,27 +86,27 @@ docker compose down
 docker compose up -d --build
 ```
 
-## 🛣️ Referencia de la API
+## Referencia de la API
 
-### 🔐 Autenticación (`/api/auth`)
+### Autenticación (`/api/auth`)
 | Método | Endpoint | Acceso | Descripción |
 | :--- | :--- | :--- | :--- |
 | `POST` | `/register` | Público | Registra un funcionario. **Validaciones:** Email válido, Pass $\ge$ 6 chars, campos obligatorios. |
 | `POST` | `/login` | Público | Valida credenciales y retorna JWT. **Validaciones:** Campos obligatorios. |
 
-### 🌍 Acceso Público (`/api`)
+### Acceso Público (`/api`)
 | Método | Endpoint | Acceso | Descripción |
 | :--- | :--- | :--- | :--- |
 | `GET` | `/departamentos` | Público | Lista todos los departamentos municipales. |
 | `GET` | `/presupuestos` | Público | Lista presupuestos con detalle de departamento. |
 | `GET` | `/contratos` | Público | Lista contratos públicos y sus proveedores. |
 
-### 👤 Usuario Autenticado (`/api/usuario`)
+### Usuario Autenticado (`/api/usuario`)
 | Método | Endpoint | Acceso | Descripción |
 | :--- | :--- | :--- | :--- |
 | `GET` | `/perfil` | JWT | Retorna la información del usuario autenticado. |
 
-### 🛡️ Administración (`/api/admin`)
+### Administración (`/api/admin`)
 | Método | Endpoint | Acceso | Descripción |
 | :--- | :--- | :--- | :--- |
 | `POST` | `/departamentos` | JWT + ADMIN | Crea un nuevo departamento municipal. |
@@ -117,14 +117,14 @@ docker compose up -d --build
 | `PUT` | `/contratos/:id` | JWT + ADMIN | Actualiza detalles de un contrato existente. |
 | `DELETE` | `/contratos/:id` | JWT + ADMIN | Elimina un contrato mediante su ID. |
 
-## 🧪 Suite de Pruebas en Postman (Estándar de Industria)
+## Suite de Pruebas en Postman (Estándar de Industria)
 
-### ⚙️ Configuración de Entorno
+### Configuración de Entorno
 Crea un entorno en Postman llamado `Transparencia_Dev` con las siguientes variables:
 - `url`: `http://localhost:3000/api`
 - `jwt_token`: (vacío inicialmente)
 
-### 🤖 Automatización de Tokens
+### Automatización de Tokens
 Para evitar copiar el token manualmente, añade el siguiente script en la pestaña **Tests** de la petición `POST /auth/login`:
 
 ```javascript
@@ -138,7 +138,7 @@ if (pm.response.code === 200) {
 }
 ```
 
-### 🛡️ Matriz de Validación de Seguridad
+### Matriz de Validación de Seguridad
 
 | Prueba | Acción | Header Authorization | Resultado Esperado |
 | :--- | :--- | :--- | :--- |
