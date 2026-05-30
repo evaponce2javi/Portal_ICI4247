@@ -14,6 +14,12 @@ services:
       - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
+    # Implementación de control de estado riguroso
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
 
   api:
     build:
@@ -31,7 +37,10 @@ services:
       - .:/usr/src/app
       - /usr/src/app/node_modules
     depends_on:
-      - db
+      db:
+        condition: service_healthy # Espera obligatoria hasta que PostgreSQL acepte tráfico
+    # Ejecución secuencial: Migración -> Sembrado (opcional) -> Arranque del servidor
+    command: sh -c "npx prisma migrate deploy && npx prisma db seed && npm run dev"
 
 volumes:
   pgdata:
