@@ -133,7 +133,13 @@ Debe aparecer en la lista.
 ```powershell
 docker compose up -d --build
 ```
+### **Si no funciona**
 
+1. Detener los contenedores y destruir el volumen con docker compose down -v
+
+2. Reconstruir la infraestructura docker compose up -d --build
+
+3. Ejecutar migración docker compose exec api npx prisma migrate deploy
 Esto descarga las imágenes, construye la API y levanta dos contenedores:
 - `transparencia_db` — la base de datos PostgreSQL.
 - `api_transparencia` — el servidor Express.
