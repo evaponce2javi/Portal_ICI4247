@@ -339,12 +339,14 @@ Refresca → vuelve el badge verde. ✅
 
 ---
 
-## Referencia rápida de la API
+## Referencia de la API
+
+Link Postman: https://ian-guerrero-v-8323707.postman.co/workspace/Ian-Misael's-Workspace~c5150f23-3f8d-4ddd-85d6-5496094bcc47/collection/55372631-deeca7b4-b35a-4479-b35d-fec346f26572?action=share&creator=55372631&active-environment=55372631-593d5004-e9e3-4ea5-82df-3405cc1b37ad
 
 ### Autenticación (público)
 | Método | Endpoint | Descripción |
 | --- | --- | --- |
-| `POST` | `/api/auth/register` | Registra un funcionario municipal (rol ADMIN por defecto) |
+| `GET` | `/registro` | Registra un funcionario municipal (rol ADMIN por defecto) |
 | `POST` | `/api/auth/login` | Valida credenciales y devuelve un JWT |
 
 > Tras correr el seed, el usuario administrador está disponible: `admin@santodomingo.cl` / `clave123`.
@@ -356,7 +358,7 @@ Refresca → vuelve el badge verde. ✅
 | `GET` | `/api/presupuestos` | Lista presupuestos con su departamento |
 | `GET` | `/api/contratos` | Lista contratos con su departamento |
 
-### Administración (requiere JWT con rol ADMIN)
+### Administración (Requiere JWT con rol ADMIN)
 | Método | Endpoint | Descripción |
 | --- | --- | --- |
 | `POST` / `PUT` | `/api/admin/departamentos[/:id]` | Crear o actualizar departamento |
@@ -364,6 +366,14 @@ Refresca → vuelve el badge verde. ✅
 | `POST` / `PUT` / `DELETE` | `/api/admin/contratos[/:id]` | Crear, actualizar o eliminar contrato |
 
 ---
+
+## Respuestas exitosas de Postman
+
+1. Registro de Funcionario
+Despliega una tabla con los sueldos brutos y líquidos de los funcionarios, filtrable por cargo e incluye la opción de descargar los datos en formato .csv.
+
+![Registro de Funcionario](./otros/img/registro1.jpg)
+![Registro de Funcionario](./otros/img/registro2.jpg)
 
 ## Comandos útiles
 
