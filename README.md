@@ -63,7 +63,7 @@ Ejecuta el FrontEnd e instala sus dependencias.
 
 ### Verifica la instalación
 
-Abre **PowerShell** (busca "PowerShell" en el menú de inicio) y ejecuta:
+Abre un cmd o **PowerShell** y ejecuta:
 
 ```powershell
 docker --version
@@ -243,6 +243,12 @@ npm install
 ```
 
 Tarda alrededor de un minuto. Es normal que aparezcan algunos `warning`; ignóralos mientras no haya `error`.
+
+> **OJO:** Si trabajas desde una terminal "PowerShell" en Visual Studio Code y te aparece que la ejecución de scripts está deshabilitada en el sistema. Puedes instalar las dependencias desde una terminal "Command Prompt", abre una tercera terminal cmd y ejecuta de aquí en adelante:
+> ```powershell
+> cd C:\Users\TuUsuario\Desktop\Portal_ICI4247-main\FrontEnd
+> npm install
+> ```
 
 #### B.5 Levanta el servidor de desarrollo
 
