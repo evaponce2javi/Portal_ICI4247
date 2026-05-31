@@ -372,8 +372,8 @@ Link Postman: https://ian-guerrero-v-8323707.postman.co/workspace/Ian-Misael's-W
 1. Registro de Funcionario
 Despliega una tabla con los sueldos brutos y líquidos de los funcionarios, filtrable por cargo e incluye la opción de descargar los datos en formato .csv.
 
-![Registro de Funcionario](./Otros/img/registro1.jpg)
-![Registro de Funcionario](./Otros/img/registro2.jpg)
+![Registro de Funcionario](./Otros/img/registro1.png)
+![Registro de Funcionario](./Otros/img/registro2.png)
 
 ## Comandos útiles
 
