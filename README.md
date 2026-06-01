@@ -17,13 +17,13 @@ Los datos sembrados se basan en información pública oficial verificada de la I
 
 ```
 Portal_ICI4247-main/
-├── README.md                   ← este archivo
+├── README.md
 ├── BackEnd/                    ← API REST + base de datos
 │   ├── compose.yaml
 │   ├── dockerfile
 │   ├── package.json
 │   ├── prisma/
-│   │   ├── schema.prisma
+│   │   ├── schema.prisma        ← ORM Base de Datos PostgreSQL
 │   │   ├── seed.js
 │   │   └── migrations/
 │   ├── src/
