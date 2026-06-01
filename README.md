@@ -415,7 +415,7 @@ Link Postman: https://ian-guerrero-v-8323707.postman.co/workspace/Ian-Misael's-W
 
 ![Actualizar Contrato](./Otros/img/actualizarcontrato.png)
 
-### 9. Eliminar Cotrato
+### 9. Eliminar Contrato
 
 ![Eliminar Contrato](./Otros/img/eliminarcontrato.png)
 
