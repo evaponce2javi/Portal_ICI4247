@@ -354,26 +354,70 @@ Link Postman: https://ian-guerrero-v-8323707.postman.co/workspace/Ian-Misael's-W
 ### Datos públicos
 | Método | Endpoint | Descripción |
 | --- | --- | --- |
-| `GET` | `/api/departamentos` | Lista direcciones municipales |
+| `GET` | `/api/categorias` | Lista las categorías para ver la información detallada según la Ley 20.285 |
+| `GET` | `/api/estructura` | Presenta el organigrama y descripción de las unidades del municipio |
+| `GET` | `/api/remuneraciones` | Lista los sueldos brutos y líquidos de todos los funcionarios municipales |
+| `GET` | `/api/contrataciones` | Lista los contratos vigentes y proveedores del municipio |
+| `GET` | `/api/transferencias` | Presenta las transferencias a organizaciones y beneficiarios externos |
+| `GET` | `/api/presupuesto` | Muestra la distribución del presupuesto municipal por departamento |
+| `GET` | `/api/subsidios` | Lista los programas sociales y beneficios entregados a la comunidad |
+| `GET` | `/api/actos` | Lista los decretos, resoluciones, permisos y concesiones que afectan a terceros |
+| `GET` | `/api/auditorias` | Muestra los resultados de auditorías internas y externas realizadas por organismos fiscalizadores |
+| `GET` | `/api/tramites` | Entrega los requisitos y procedimientos para realizar trámites en el municipio |
 | `GET` | `/api/presupuestos` | Lista presupuestos con su departamento |
-| `GET` | `/api/contratos` | Lista contratos con su departamento |
+| `GET` | `/api/participacion` | Lista las consultas ciudadanas, COSOC, audiencias públicas y otras instancias de participación |
 
 ### Administración (Requiere JWT con rol ADMIN)
 | Método | Endpoint | Descripción |
 | --- | --- | --- |
-| `POST` / `PUT` | `/api/admin/departamentos[/:id]` | Crear o actualizar departamento |
-| `POST` / `PUT` | `/api/admin/presupuestos[/:id]` | Crear o actualizar presupuesto |
-| `POST` / `PUT` / `DELETE` | `/api/admin/contratos[/:id]` | Crear, actualizar o eliminar contrato |
+| `POST` | `/api/admin/departamentos` | Crea un nuevo departamento municipal. |
+| `PUT` | `/api/admin/departamentos/:id` | Actualiza la información de un departamento. |
+| `POST` | `/api/admin/presupuestos` | Asigna un presupuesto a un departamento. |
+| `PUT` | `/api/admin/presupuestos/:id` | Actualiza montos o año de un presupuesto. |
+| `POST` | `/api/admin/contratos` | Registra un nuevo contrato público. |
+| `PUT` | `/api/admin/contratos/:id` | Actualiza detalles de un contrato existente. |
+| `DELETE` | `/api/admin/contratos/:id` | Elimina un contrato mediante su ID. |
 
 ---
 
 ## Respuestas exitosas de Postman
 
-1. Registro de Funcionario
-Despliega una tabla con los sueldos brutos y líquidos de los funcionarios, filtrable por cargo e incluye la opción de descargar los datos en formato .csv.
+### 1. Registro de Funcionario
 
 ![Registro de Funcionario](./Otros/img/registro1.png)
 ![Registro de Funcionario](./Otros/img/registro2.png)
+
+### 2. Login de Administrador
+
+![Login de Administrador](./Otros/img/login.png)
+
+### 3. Crear Departamento
+
+![Crear Departamento](./Otros/img/creardepto.png)
+
+### 4. Actualizar Departamento
+
+![Actualizar Departamento](./Otros/img/actualizardepto.png)
+
+### 5. Asignar Presupuesto
+
+![Asignar Presupuesto](./Otros/img/asignarpresupuesto.png)
+
+### 6. Actualizar Presupuesto
+
+![Actualizar Presupuesto](./Otros/img/actualizarpresupuesto.png)
+
+### 7. Crear Contrato
+
+![Crear Contrato](./Otros/img/crearcontrato.png)
+
+### 8. Actualizar Contrato
+
+![Actualizar Contrato](./Otros/img/actualizarcontrato.png)
+
+### 9. Eliminar Cotrato
+
+![Eliminar Contrato](./Otros/img/eliminarcontrato.png)
 
 ## Comandos útiles
 
