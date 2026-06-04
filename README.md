@@ -41,6 +41,16 @@ Portal_ICI4247-main/
 ```
 
 ---
+---
+
+## Modelo de Base de Datos
+
+El sistema utiliza una base de datos relacional administrada a través de **Prisma ORM**. A continuación se presenta el diagrama de entidad-relación que representa la estructura de las tablas (`Usuario`, `Departamento`, `Presupuesto`, `Contrato`) y sus respectivas relaciones:
+
+![Diagrama de Base de Datos Relacional](./Otros/img/diagrama_bd.jpeg)
+
+> **Nota:** Las restricciones de integridad, claves foráneas y tipos de datos están definidos en el archivo `BackEnd/prisma/schema.prisma`.
+
 
 ## Requisitos previos
 
