@@ -12,7 +12,7 @@ router.use(verificarAdmin);
 
 router.post('/departamentos', validateSchema(crearDepartamentoSchema), adminController.crearDepartamento);
 router.put('/departamentos/:id', validateSchema(idParamSchema), adminController.actualizarDepartamento);
-router.post('/presupuestos', validateSchema(crearPresupuestoSchema), adminController.crearPresupuesto);
+router.post('/presupuestos', adminController.crearPresupuesto);
 router.put('/presupuestos/:id', validateSchema(idParamSchema), adminController.actualizarPresupuesto);
 router.post('/contratos', validateSchema(crearContratoSchema), adminController.crearContrato);
 router.put('/contratos/:id', validateSchema(idParamSchema), adminController.actualizarContrato);
