@@ -275,7 +275,7 @@ Abre esa URL en el navegador.
 Sigue este guion completo. Si todos los pasos funcionan, la integración está correcta.
 
 ### 1. Registrar un nuevo funcionario (opcional)
-
+> Esta sección está hecha exclusivamente para que el ayudante pueda seguir probando nuestro programa como admin y se eliminará en la entrega final.
 1. Ve a `http://localhost:5173/registro`
 2. Llena el formulario:
    - **Nombre:** `Juan Pérez`
