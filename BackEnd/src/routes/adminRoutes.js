@@ -10,12 +10,12 @@ const { crearDepartamentoSchema, crearContratoSchema, idParamSchema } = require(
 router.use(protegerRuta);
 router.use(verificarAdmin);
 
-router.post('/departamentos', adminController.crearDepartamento);
-router.put('/departamentos/:id', adminController.actualizarDepartamento);
-router.post('/presupuestos', adminController.crearPresupuesto);
-router.put('/presupuestos/:id', adminController.actualizarPresupuesto);
-router.post('/contratos', adminController.crearContrato);
-router.put('/contratos/:id', adminController.actualizarContrato);
-router.delete('/contratos/:id', adminController.eliminarContrato);
+router.post('/departamentos', validateSchema(crearDepartamentoSchema), adminController.crearDepartamento);
+router.put('/departamentos/:id', validateSchema(idParamSchema), adminController.actualizarDepartamento);
+router.post('/presupuestos', validateSchema(crearPresupuestoSchema), adminController.crearPresupuesto);
+router.put('/presupuestos/:id', validateSchema(idParamSchema), adminController.actualizarPresupuesto);
+router.post('/contratos', validateSchema(crearContratoSchema), adminController.crearContrato);
+router.put('/contratos/:id', validateSchema(idParamSchema), adminController.actualizarContrato);
+router.delete('/contratos/:id', validateSchema(idParamSchema), adminController.eliminarContrato);
 
 module.exports = router;
